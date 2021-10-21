@@ -50,7 +50,7 @@ function makeLinks($linkArr)
   {
     if($url == THIS_PAGE)
     {
-      $myReturn = '<a class="active" href="' . $url . '">' . $text . '</a>' . PHP_EOL;
+      $myReturn .= '<a class="active" href="' . $url . '">' . $text . '</a>' . PHP_EOL;
     }else{
       $myReturn .= '<a href="' . $url . '">' . $text . '</a>' . PHP_EOL;
     }
