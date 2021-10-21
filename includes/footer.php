@@ -1,6 +1,6 @@
     <!-- footer starts here -->
     <footer>
-     <p><small>&copy; 2021 by 
+     <p><small>&copy; <?=date('Y')?>
       <a href="contact.php">Michael Lyon</a>, All Rights Reserved ~ 
       <a id="html-checker" href="#">Check HTML</a> ~ 
       <a href="https://jigsaw.w3.org/css-validator/check?uri=referer">Check CSS</a></small>
