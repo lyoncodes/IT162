@@ -7,14 +7,11 @@ define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 date_default_timezone_set('America/Los_Angeles');
 
 // Nav
-$nav1 = array(
-  "index.php" => "Welcome",
-  "elements.html" => "HTML Elements",
-  "aia.php" => "AIA",
-  "big/index.php" => "BIG",
-  "https://docs.google.com/document/d/1mRvdNmx75YeJcQ63h9gTS6ctxeYhgUOZ0ghEjCsGfIY/edit" => "Flowchart",
-  "fp/index.php" => "Final Projects",
+$finalNav = array(
+  "index.php" => "Overview",
+  "objectives.php" => "Objectives",
   "contact.php" => "Contact Michael",
+  "../fp-wireframe-2.pdf" => "Flowchart",
 );
 
 
@@ -24,21 +21,32 @@ $logo_color = '';
 
 switch(THIS_PAGE) {
   case 'index.php':
-    $title = 'Michael Lyon - IT162';
+    $title = 'Back to Portal';
+    $subtitle = 'Project Overview';
     $logo = 'fa-home';
     $PageID = 'Welcome';
-    $logo_color = ' style="color:#00f"';
+    $logo_color = ' style="color:#FF9700"';
+    $logo_url = ' ../index.php';
+    break;
+  case 'objectives.php':
+    $title = 'Back to Portal';
+    $subtitle = 'Project Objectives';
+    $logo = 'fa-home';
+    $PageID = 'Objectives';
+    $logo_color = ' style="color:#FFC300"';
+    $logo_url = 'index.php';
     break;
   case 'contact.php':
-    $title = 'Let\'s get in touch!';
-    $logo = 'fa-paper-plane-o';
-    $PageID = 'Contact Michael';
-    $logo_color = ' style="color:#00f"';
+    $title = 'Back to Portal';
+    $subtitle = 'Contact Michael';
+    $logo = 'fa-home';
+    $PageID = 'Contact';
+    $logo_color = ' style="color:#017FF8"';
+    $logo_url = 'index.php';
     break;
-
   default:
     $title = THIS_PAGE;
-    $logo = '🧸';
+    $logo = 'fa-angle-left';
     $PageID = 'Welcome';
 };
 
